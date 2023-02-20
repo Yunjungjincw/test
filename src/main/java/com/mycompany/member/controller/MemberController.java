@@ -85,7 +85,7 @@ public class MemberController {
 		//post방식
 		//요청주소 ~컨페/member/update
 		@PostMapping("/member/update")
-		public String submitModiMemberForm(@ModelAttribute("UpdateMember") Member member) {
+		public String submitModiMemberForm(Member member) {
 			//service -> DAO(repository)에서 update 실행
 			logger.info(member.toString());
 			
