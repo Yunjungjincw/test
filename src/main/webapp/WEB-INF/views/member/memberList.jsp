@@ -21,7 +21,7 @@ ${memberList}
 		</tr>
 		<c:forEach items="${memberList}" var="item" varStatus="status">
 		<tr>
-			<td><a href="<%=request.getContextPath()%>/memberInfo?memberid=${item.id}">${item.id}</a></td>
+			<td><a href="<%=request.getContextPath()%>/member/info?memberid=${item.id}">${item.id}</a></td>
 			<td>${item.passwd}</td>
 			<td>${item.name}</td>
 			<td>${item.gender}</td>

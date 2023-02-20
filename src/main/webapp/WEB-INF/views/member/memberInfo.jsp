@@ -35,7 +35,7 @@
 			<tr>
 				<td colspan="2" align="center">
 					<a href="<%=request.getContextPath()%>/member/update?memberid=${member.id}">정보 수정</a>
-					<a href="<%=request.getContextPath()%>/member/delete">삭제하기</a>
+					<a href="<%=request.getContextPath()%>/member/delete?memberid=${member.id}">삭제하기</a>
 				</td>
 			</tr>
 		</table>

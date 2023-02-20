@@ -16,6 +16,10 @@ public interface MemberRepository {
 
 	//회원목록조회
 	public List<Member> getAllMemberList();
+	
+	public abstract void modiMember(Member member);
+	
+	public abstract void deleteMember(String memberid);
 }
 
 
