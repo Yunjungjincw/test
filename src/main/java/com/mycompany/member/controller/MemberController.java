@@ -48,7 +48,7 @@ public class MemberController {
 		
 		Member member = memberService.getMemberById(id);
 		model.addAttribute("member",member);
-		return "member/memberInfo";
+		return "member/member/info";
 	}
 	
 	
@@ -67,7 +67,8 @@ public class MemberController {
 	//get방식
 	//요청주소 ~ 컨페/member/update
 	@GetMapping("/member/update")
-	public ModelAndView requestModiMemberForm(@RequestParam("memberid") String id, ModelAndView mv) {
+	public ModelAndView requestModiMemberForm(@ModelAttribute("UpdateMember") Member member, 
+									@RequestParam("memberid") String id, ModelAndView mv) {
 		logger.info(id);
 		
 		//수정폼에는 수정하고자 하는 특정회원의 정보데이터가 출력이 되어 있어야 하므로 
@@ -75,7 +76,7 @@ public class MemberController {
 		Member member = memberService.getMemberById(id);
 		mv.addObject("member",member);
 		mv.addObject("memberid", id);
-		mv.setViewName("member/modiMemberForm");
+		mv.setViewName("member/modiMemberForm.jsp");
 		return mv;
 	}
 	
@@ -84,9 +85,10 @@ public class MemberController {
 		//post방식
 		//요청주소 ~컨페/member/update
 		@PostMapping("/member/update")
-		public String requestMemberUpdate(@ModelAttribute("UpdateMember") Member member) {
+		public String submitModiMemberForm(@ModelAttribute("UpdateMember") Member member) {
 			//service -> DAO(repository)에서 update 실행
 			logger.info(member.toString());
+			
 			
 			return null;
 		}

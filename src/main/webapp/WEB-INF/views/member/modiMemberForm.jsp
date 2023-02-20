@@ -9,9 +9,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+${member }
 	<h3>회원정보 변경 ModiMemberForm</h3>
 	<hr>
-	<form:form id="ModiMemberFrm" ModelAttribute="UpdateMember" method="post" action="<%=request.getContextPath()%>/update">
+	<form:form id="ModiMemberFrm" ModelAttribute="UpdateMember" 
+	method="post" action="<%=request.getContextPath()%>/member/update">
 		<table border="1">
 			<tr>
 				<td>아이디</td>
