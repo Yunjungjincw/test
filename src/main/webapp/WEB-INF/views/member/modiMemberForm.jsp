@@ -11,31 +11,24 @@
 <body>
 	<h3>회원정보 변경 ModiMemberForm</h3>
 	<hr>
-	<form:form modelAttribute="updateMember" method="post" action="./update">
+	<form:form id="ModiMemberFrm" ModelAttribute="UpdateMember" method="post" action="<%=request.getContextPath()%>/update">
 		<table border="1">
 			<tr>
-				<td>ID</td>
-				<td>${member.id}</td>
+				<td>아이디</td>
+				<td><form:input path="id" value="${member.id}"/></td>
 			</tr>
 			<tr>
-				<td>pw</td>
-				<td>${member.passwd}</td>
+				<td>비밀번호</td>
+				<td><form:password path="passwd"/></td>
 			</tr>
 			<tr>
-				<td>name</td>
-				<td <form:input path="name" value="${member.name}"/>></td>
-			</tr>
-			<tr>
-				<td>gender</td>
-				<td <form:input path="gender" value="${member.gender}"/>></td>
-			</tr>
-			<tr>
-				<td>가입일</td>
-				<td>${member.regdate}</td>
+				<td>성별</td>
+				<td><form:input path="gender" value="${member.gender}"/></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
-					<a href="<%=request.getContextPath()%>/member/update">수정하기</a>
+				<input type="submit" value="확인">
+				<input type="reset" value="취소">
 				</td>
 			</tr>
 		</table>
