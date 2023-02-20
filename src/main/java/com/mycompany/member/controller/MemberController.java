@@ -73,7 +73,7 @@ public class MemberController {
 		
 		//수정폼에는 수정하고자 하는 특정회원의 정보데이터가 출력이 되어 있어야 하므로 
 		// 특정회원의 정보를 가져와 model처리하여 view로 넘긴다.
-		Member member = memberService.getMemberById(id);
+		member = memberService.getMemberById(id);
 		mv.addObject("member",member);
 		mv.addObject("memberid", id);
 		mv.setViewName("member/modiMemberForm.jsp");
