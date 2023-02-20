@@ -63,6 +63,33 @@ public class MemberRepositoryImpl implements MemberRepository{
 		        new MemberRowMapper()); 
 		return memberList;
 	}
+
+	@Override
+	public void modiMember(Member member) {
+		System.out.println(member);
+		
+		String sql="update simplemember " + 
+				" set gender=? ,passwd=? " + 
+				" where id=?";
+		
+		int cnt =this.template.update(sql,
+				member.getGender(),
+				member.getPasswd(),
+				member.getId());
+		System.out.println(cnt);
+	}
+	
+	//회원삭제
+	@Override
+	public void deleteMember(String memberid) {
+		System.out.println(memberid);
+		
+		String sql = "delete from simplemember" + 
+				" where id=?";
+		
+		int cnt =this.template.update(sql,memberid);
+		System.out.println(cnt);
+	}
 }
 
 

@@ -17,5 +17,7 @@ public interface MemberService {
 		public abstract List<Member> getAllMemberList();
 		
 		//비밀번호수정처리
-		public void requestModiMemberForm();
+		public abstract void modiMember(Member member);
+		
+		public abstract void deleteMember(String memberid);
 }

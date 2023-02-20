@@ -9,23 +9,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-${member }
+${member1}
 	<h3>회원정보 변경 ModiMemberForm</h3>
 	<hr>
-	<form:form id="ModiMemberFrm" ModelAttribute="UpdateMember" 
-	method="post" action="<%=request.getContextPath()%>/member/update">
+	<form id="ModiMemberFrm" method="post" action="<%=request.getContextPath()%>/member/update">
 		<table border="1">
 			<tr>
 				<td>아이디</td>
-				<td><form:input path="id" value="${member.id}"/></td>
+				<td><input type="text" name="id" value="${member1.id}" readonly/></td>
 			</tr>
 			<tr>
 				<td>비밀번호</td>
-				<td><form:password path="passwd"/></td>
+				<td><input type="password" name="passwd"/></td>
 			</tr>
 			<tr>
 				<td>성별</td>
-				<td><form:input path="gender" value="${member.gender}"/></td>
+				<td><input type="text" name="gender" value="${member1.gender}"/></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
@@ -34,6 +33,6 @@ ${member }
 				</td>
 			</tr>
 		</table>
-	</form:form>
+	</form>
 </body>
 </html>

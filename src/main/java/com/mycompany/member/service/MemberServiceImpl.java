@@ -34,7 +34,13 @@ public class MemberServiceImpl implements MemberService{
 	}
 
 	@Override
-	public void requestModiMemberForm() {
+	public void modiMember(Member member) {
+		memberRepository.modiMember(member);
+	}
+	
+	public  void deleteMember(String memberid) {
+		System.out.println("여긴 접속되나?");
+		memberRepository.deleteMember(memberid);
 	}
 }
 
