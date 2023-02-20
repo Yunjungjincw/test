@@ -6,6 +6,7 @@
 <title>Form Tag</title>
 </head>
 <body>
+<h3>add member</h3>
 	<h3>회원가입</h3>
 	<h3>addMember.jsp</h3>
 
